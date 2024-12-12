@@ -19,6 +19,8 @@ def main():
     dropdown_options = [0, 1, 2, 3, 4, 5]
 
     # Inputs
+    store_id = st.text_input("Store ID")
+
     no_of_stores_in_radius = st.selectbox("Number of Stores in Radius", options=dropdown_options)
     site_location_floors = st.selectbox("Site Location Floors", options=dropdown_options)
     footfall_avg = st.selectbox("Average Footfall", options=dropdown_options)
