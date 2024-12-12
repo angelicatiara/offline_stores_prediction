@@ -48,16 +48,17 @@ def main():
     if st.button('Predict Metrics'):
         # Prepare input data as a DataFrame
         input_data = pd.DataFrame({
-            'Store_ID': [store_id],
-            'AOV': [average_order_value],
-            'Monthly_Rate': [monthly_rate],
-            'Foot_Traffic': [monthly_foot_traffic],
-            'Location_Type': [location_type],
-            'Store_Size': [store_size]
+            'Store_Size': [store_size],
+            'Stores_in_Radius': [no_of_stores_in_radius],
+            'Location_Floors': [site_location_floors],
+            'Footfall_Avg': [footfall_avg],
+            'Category_Tenancy_Mix': [category_tenancy_mix],
+            'Customer_Profile': [customer_profile],
+            'SOCO_Members': [soco_members],
+            'Shoppers_P12M': [shoppers_p12m],
+            'Population': [population],
         })
 
-        # Preprocess the data
-        processed_data = preprocess_data(input_data)
 
         # Make predictions
         prediction = best_model.predict(processed_data)
