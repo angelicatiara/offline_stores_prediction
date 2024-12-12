@@ -17,13 +17,12 @@ def main():
     # Set page configuration for better UX
     st.set_page_config(
         page_title='Sociolla Offline Store Predictions',
-        page_icon='\ud83c\udfe2',
         layout='wide',
         initial_sidebar_state='expanded'
     )
 
     # Title and description
-    st.title('\ud83c\udfe2 Sociolla Offline Store Prediction App')
+    st.title('Sociolla Offline Store Prediction App')
     st.write('Fill in the store details below to predict AOV ranges, monthly rate, and monthly net revenue.')
 
     # Split the page into two columns for inputs
@@ -31,7 +30,7 @@ def main():
 
     with col1:
         st.header('Store Details')
-        store_id = st.text_input('Store ID', value='Store001', help='Unique identifier for the store.')
+        store_id = st.text_input('Store ID', value='SLP', help='Unique identifier for the store.')
         average_order_value = st.number_input('Average Order Value (AOV)', min_value=0.0, value=150000.0, step=5000.0, help='Average order value in Rupiah.')
         monthly_rate = st.number_input('Monthly Rate', min_value=0.0, value=500.0, step=10.0, help='Number of transactions per month.')
 
