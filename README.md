@@ -1,15 +1,4 @@
-# **GrocerGenius: AI-Based Supermarket Sales Prediction**  
-
-## **Overview**  
-GrocerGenius is a data-driven solution aimed at transforming supermarket operations by accurately forecasting sales. By analyzing historical sales data and outlet characteristics, the project empowers retail managers to make informed decisions, optimize inventory, and boost customer satisfaction. This repository contains the complete implementation of the project, including data preprocessing, exploratory analysis, machine learning models, and deployment via an API.
-
----
-
-## **Features**  
-- Predict future sales for different supermarket products and outlets.  
-- Analyze sales trends and uncover insights through visualizations.  
-- Optimize inventory management with accurate forecasts.  
-- Easily deploy the model through a Flask-based REST API.  
+\\
 
 ---
 
