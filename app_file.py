@@ -63,11 +63,35 @@ def main():
         # Make predictions
         prediction = best_model.predict(input_data)
 
+        aov_50k = prediction[0][0]
+        aov_50_100k = prediction[0][1]
+        aov_100_200k = prediction[0][2]
+        aov_200_300k = prediction[0][3]
+        aov_300_500k = prediction[0][4]
+        aov_500k_1mio = prediction[0][5]
+        aov_1_3mio = prediction[0][6]
+        aov_3_5mio = prediction[0][7]
+        aov_5mio = prediction[0][8]
+        monthly_rate = prediction[0][9]
+        net_rev_monthly = prediction[0][10]
+        aov_overall = net_rev_monthly / monthly_rate if monthly_rate != 0 else 0
+        
         # Display the results
         st.write('### Predictions:')
-        st.write(f'**AOV Range:** {prediction[0][0]:,.0f} - {prediction[0][1]:,.0f} Rupiah')
-        st.write(f'**Monthly Rate:** {prediction[0][2]:,.0f} Transactions')
-        st.write(f'**Monthly Net Revenue:** {prediction[0][3]:,.0f} Rupiah')
+        st.write(f'**AOV Range (orders):**')
+        st.write(f'AOV <50k: {aov_50k} orders')
+        st.write(f'AOV 50-100k: {aov_50_100k} orders')
+        st.write(f'AOV 100-200k: {aov_100_200k} orders')
+        st.write(f'AOV 200-300k: {aov_200_300k} orders')
+        st.write(f'AOV 300-500k: {aov_300_500k} orders')
+        st.write(f'AOV 500k-1mio: {aov_500k_1mio} orders')
+        st.write(f'AOV 1-3mio: {aov_1_3mio} orders')
+        st.write(f'AOV 3-5mio: {aov_3_5mio} orders')
+        st.write(f'AOV >5mio: {aov_5mio} orders')
+
+        st.write(f'**Monthly Rate (orders):** {monthly_rate}')
+        st.write(f'**Monthly Net Revenue (Rupiah):** {net_rev_monthly:,.0f}')
+        st.write(f'**AOV Overall:** {aov_overall:,.0f} Rupiah (calculated as net_rev_monthly / monthly_rate)')
 
 if __name__ == "__main__":
     main()
