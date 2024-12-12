@@ -14,6 +14,7 @@ def main():
         initial_sidebar_state='expanded',
     )
     st.title('Sociolla Offline Stores Prediction App')
+    st.image('sociolla_store.jpg', use_column_width=True)
     st.write('Welcome! Fill in the details below to predict the monthly rate and sales of a Sociolla store.')
 
     # Dropdown options for values between 0 to 5
