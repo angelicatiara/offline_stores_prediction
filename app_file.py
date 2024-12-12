@@ -41,12 +41,6 @@ def main():
     st.write(f"Shoppers in the Past 12 Months: {shoppers_p12m}")
     st.write(f"Population: {population}")
 
-    # Placeholder for other inputs
-    store_id = st.text_input("Store ID")
-    average_order_value = st.number_input("Average Order Value (Rupiah)", value=0.0, min_value=0.0)
-    monthly_rate = st.number_input("Monthly Rate (Transactions)", value=0, min_value=0)
-    monthly_foot_traffic = st.number_input("Monthly Foot Traffic", value=0, min_value=0)
-    location_type = st.text_input("Location Type")
 
     # Prediction Button
     if st.button('Predict Metrics'):
