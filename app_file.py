@@ -23,12 +23,12 @@ def main():
     # Inputs
     store_id = st.text_input("Store ID")
 
-    no_of_stores_in_radius = st.selectbox("Number of Stores in Radius", options=dropdown_options)
-    site_location_floors = st.selectbox("Site Location Floors", options=dropdown_options)
-    footfall_avg = st.selectbox("Average Footfall", options=dropdown_options)
-    category_tenancy_mix = st.selectbox("Category Tenancy Mix", options=dropdown_options)
+    no_of_stores_in_radius = st.selectbox("Number of Stores in Radius", options=dropdown_options, help='Number of stores within city radius 10Km (stores).')
+    site_location_floors = st.selectbox("Site Location Floors", options=dropdown_options, help='Site Location in score 0-5.')
+    footfall_avg = st.selectbox("Average Footfall", options=dropdown_options, help='Average traffic coming to store in score 0-5.')
+    category_tenancy_mix = st.selectbox("Category Tenancy Mix", options=dropdown_options, help='Category Tenancy Mix with same targeted customer, e.g. Fashion, Food and Beverages, Beauty, etc.')
     customer_profile = st.selectbox("Customer Profile Score", options=dropdown_options)
-    store_size = st.number_input("Store Size (sq.ft)", value=0, min_value=0)  # Numeric input
+    store_size = st.number_input("Store Size (sq.ft)", value=0, min_value=0, help='Please input actual store size in metre square.')  # Numeric input
     soco_members = st.selectbox("Number of SOCO Members", options=dropdown_options)
     shoppers_p12m = st.selectbox("Shoppers in the Past 12 Months", options=dropdown_options)
     population = st.selectbox("Population", options=dropdown_options)
