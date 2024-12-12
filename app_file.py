@@ -48,15 +48,15 @@ def main():
     if st.button('Predict Metrics'):
         # Prepare input data as a DataFrame
         input_data = pd.DataFrame({
-            'Store_Size': [store_size],
-            'Stores_in_Radius': [no_of_stores_in_radius],
-            'Location_Floors': [site_location_floors],
-            'Footfall_Avg': [footfall_avg],
-            'Category_Tenancy_Mix': [category_tenancy_mix],
-            'Customer_Profile': [customer_profile],
-            'SOCO_Members': [soco_members],
-            'Shoppers_P12M': [shoppers_p12m],
-            'Population': [population],
+            'store_size': [store_size],
+            'no_of_stores_in_radius': [no_of_stores_in_radius],
+            'site_location_floors': [site_location_floors],
+            'footfall_avg': [footfall_avg],
+            'category_tenancy_mix': [category_tenancy_mix],
+            'customer_profile': [customer_profile],
+            'soco_members': [soco_members],
+            'shoppers_p12m': [shoppers_p12m],
+            'population': [population],
         })
 
 
