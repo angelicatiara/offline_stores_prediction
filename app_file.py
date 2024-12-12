@@ -13,6 +13,8 @@ def main():
         layout='wide',
         initial_sidebar_state='expanded',
     )
+    st.title('Sociolla Offline Stores Prediction App')
+    st.write('Welcome! Fill in the details below to predict the monthly rate and sales of a Sociolla store.')
 
     # Dropdown options for values between 0 to 5
     dropdown_options = [0, 1, 2, 3, 4, 5]
