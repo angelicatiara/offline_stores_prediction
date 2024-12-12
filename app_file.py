@@ -61,7 +61,7 @@ def main():
 
 
         # Make predictions
-        prediction = best_model.predict(processed_data)
+        prediction = best_model.predict(input_data)
 
         # Display the results
         st.write('### Predictions:')
