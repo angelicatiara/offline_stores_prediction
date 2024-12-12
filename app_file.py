@@ -6,7 +6,6 @@ import streamlit as st
 # Load the saved model
 best_model = joblib.load('store_model.pkl')
 
-
 # Streamlit UI for user input
 def main():
     st.set_page_config(
@@ -43,10 +42,9 @@ def main():
     st.write(f"Shoppers in the Past 12 Months: {shoppers_p12m}")
     st.write(f"Population: {population}")
 
-
     # Prediction Button
     if st.button('Predict Metrics'):
-        # Prepare input data as a DataFrame
+        # Prepare input data as a DataFrame with standardized column names (lowercase)
         input_data = pd.DataFrame({
             'store_size': [store_size],
             'no_of_stores_in_radius': [no_of_stores_in_radius],
@@ -59,6 +57,8 @@ def main():
             'population': [population],
         })
 
+        # Ensure the column names are in lowercase (if that's how the model was trained)
+        input_data.columns = input_data.columns.str.lower()
 
         # Make predictions
         prediction = best_model.predict(input_data)
@@ -71,3 +71,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
