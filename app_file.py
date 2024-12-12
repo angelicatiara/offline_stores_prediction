@@ -46,12 +46,12 @@ def main():
     if st.button('Predict Metrics'):
         # Prepare input data as a DataFrame with standardized column names (lowercase)
         input_data = pd.DataFrame({
-            'store_size': [store_size],
             'no_of_stores_in_radius': [no_of_stores_in_radius],
             'site_location_floors': [site_location_floors],
             'footfall_avg': [footfall_avg],
             'category_tenancy_mix': [category_tenancy_mix],
             'customer_profile': [customer_profile],
+            'store_size': [store_size],
             'soco_members': [soco_members],
             'shoppers_p12m': [shoppers_p12m],
             'population': [population],
